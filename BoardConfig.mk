@@ -160,6 +160,13 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libion \
     libdiag
 
+# Library
+TARGET_RECOVERY_DEVICE_MODULES += \
+    vendor.oplus.hardware.touch@1.0.vendor
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/vendor.oplus.hardware.touch@1.0.so
+
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
